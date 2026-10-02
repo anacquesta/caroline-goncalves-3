@@ -1,0 +1,196 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--footer-height);
+  background-color: rgba(245, 243, 238, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: var(--border-line);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: var(--z-footer);
+}
+
+.pageInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+}
+
+.pageNumber {
+  font-weight: 700;
+  color: var(--accent-gold);
+  font-size: 0.85rem;
+}
+
+.divider {
+  color: var(--text-tertiary);
+}
+
+.totalPages {
+  color: var(--text-tertiary);
+}
+
+.pageDot {
+  color: rgba(11, 11, 11, 0.2);
+  margin: 0 4px;
+}
+
+.pageLabel {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.pageTag {
+  color: var(--text-tertiary);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+}
+
+/* Center Progress Bar */
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 1 360px;
+}
+
+.progressEndpoint {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  font-feature-settings: "tnum";
+}
+
+.progressTrack {
+  flex: 1;
+  height: 2px;
+  background-color: rgba(11, 11, 11, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--accent-gold);
+  transition: width 500ms var(--ease-editorial);
+}
+
+/* Right Controls */
+.rightControls {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.hints {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+}
+
+.hintKey {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: var(--border-line);
+  background-color: #FFFFFF;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.hintText {
+  letter-spacing: 0.1em;
+  margin-left: 2px;
+}
+
+.audioBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: var(--border-line);
+  padding: 4px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.audioBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--accent-gold);
+}
+
+.audioActive {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold-border);
+  background-color: var(--accent-gold-subtle);
+}
+
+.locationBadge {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.compassIcon {
+  color: var(--accent-gold);
+}
+
+.adminLink {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  color: var(--text-tertiary);
+  padding: 4px 8px;
+  border: var(--border-line-subtle);
+  transition: all var(--transition-fast);
+}
+
+.adminLink:hover {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .progressContainer {
+    display: none;
+  }
+  .hints {
+    display: none;
+  }
+  .locationBadge {
+    display: none;
+  }
+  .footer {
+    padding: 0 16px;
+  }
+}

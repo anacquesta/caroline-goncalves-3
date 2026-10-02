@@ -1,0 +1,227 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 32px;
+  background-color: var(--bg-canvas);
+}
+
+.innerScroll {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.boardCard {
+  border: var(--border-line);
+  background-color: var(--bg-paper);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 36px;
+  border-bottom: var(--border-line);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  color: var(--accent-gold);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.mainTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.topBarRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.counter {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.navBtns {
+  display: flex;
+  gap: 6px;
+}
+
+.navBtn {
+  width: 36px;
+  height: 36px;
+  border: var(--border-line);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.navBtn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background-color: var(--accent-gold-subtle);
+}
+
+/* Quote Stage */
+.quoteStage {
+  flex: 1;
+  padding: 48px 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 32px;
+  background: radial-gradient(circle at 10% 20%, rgba(245, 243, 238, 0.6) 0%, rgba(255, 255, 255, 1) 90%);
+}
+
+.quoteHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bigNumber {
+  font-family: var(--font-sans);
+  font-size: clamp(3.5rem, 6vw, 5.5rem);
+  font-weight: 800;
+  color: rgba(181, 155, 106, 0.25);
+  line-height: 0.8;
+  letter-spacing: -0.04em;
+}
+
+.bigQuoteIcon {
+  color: var(--accent-gold);
+}
+
+.quoteBody {
+  max-width: 980px;
+}
+
+.quoteText {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
+  line-height: 1.45;
+  color: var(--text-primary);
+  font-weight: 300;
+}
+
+.authorMeta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 24px;
+  border-top: var(--border-line);
+}
+
+.authorIdentity {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.authorName {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.authorRole {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-gold);
+  font-weight: 700;
+}
+
+.authorOrg {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+}
+
+.dotsRow {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(11, 11, 11, 0.2);
+  background: transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dotActive {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  transform: scale(1.2);
+}
+
+/* Bottom Bar */
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 36px;
+  background-color: #FAF8F5;
+  border-top: var(--border-line);
+}
+
+.bottomBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  color: var(--text-tertiary);
+}
+
+.starIcon {
+  color: var(--accent-gold);
+}
+
+.bottomCoord {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .quoteStage {
+    padding: 32px 24px;
+  }
+  .authorMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}

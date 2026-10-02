@@ -1,0 +1,133 @@
+.sideNavBtn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: var(--z-side-nav);
+  padding: 12px;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.sideNavLeft {
+  left: 12px;
+}
+
+.sideNavRight {
+  right: 12px;
+}
+
+.circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(11, 11, 11, 0.2);
+  background-color: rgba(245, 243, 238, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.btnLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all var(--transition-fast);
+  pointer-events: none;
+}
+
+.sideNavRight .btnLabel {
+  align-items: flex-end;
+  transform: translateX(4px);
+}
+
+.metaNum {
+  font-weight: 700;
+  color: var(--accent-gold);
+}
+
+.metaText {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.arrowIcon {
+  transition: transform var(--transition-fast);
+}
+
+.sideNavLeft:hover .circle {
+  border-color: var(--accent-gold);
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sideNavLeft:hover .arrowIcon {
+  transform: translateX(-4px);
+}
+
+.sideNavLeft:hover .btnLabel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.sideNavRight:hover .circle {
+  border-color: var(--accent-gold);
+  background-color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sideNavRight:hover .arrowIcon {
+  transform: translateX(4px);
+}
+
+.sideNavRight:hover .rotateIcon {
+  transform: rotate(-45deg);
+}
+
+.rotateIcon {
+  transition: transform var(--transition-fast);
+  color: var(--accent-gold);
+}
+
+.sideNavRight:hover .btnLabel {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.isLoopBack .circle {
+  border-color: var(--accent-gold-border);
+}
+
+/* Mobile: simpler & smaller */
+@media (max-width: 768px) {
+  .btnLabel {
+    display: none !important;
+  }
+  .circle {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(245, 243, 238, 0.95);
+  }
+  .sideNavLeft {
+    left: 6px;
+  }
+  .sideNavRight {
+    right: 6px;
+  }
+}

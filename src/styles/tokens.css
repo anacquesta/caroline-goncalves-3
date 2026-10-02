@@ -1,0 +1,58 @@
+:root {
+  /* Color Palette - Neo-Editorial Swiss */
+  --bg-canvas: #F5F3EE;
+  --bg-paper: #FFFFFF;
+  --bg-ink: #0B0B0B;
+  --bg-charcoal: #252525;
+  --bg-ink-card: #141414;
+
+  --accent-gold: #B59B6A;
+  --accent-gold-hover: #C7AD7D;
+  --accent-gold-subtle: rgba(181, 155, 106, 0.15);
+  --accent-gold-border: rgba(181, 155, 106, 0.35);
+
+  --text-primary: #0B0B0B;
+  --text-secondary: #4A4A46;
+  --text-tertiary: #7D7D76;
+  --text-inverse: #F5F3EE;
+  --text-inverse-muted: #A8A8A1;
+
+  /* 1px Hairlines */
+  --border-line: 1px solid rgba(11, 11, 11, 0.12);
+  --border-line-subtle: 1px solid rgba(11, 11, 11, 0.06);
+  --border-line-dark: 1px solid rgba(245, 243, 238, 0.12);
+  --border-line-gold: 1px solid rgba(181, 155, 106, 0.4);
+
+  /* Layout & Viewport */
+  --header-height: 72px;
+  --footer-height: 60px;
+  --board-height: calc(100dvh - var(--header-height) - var(--footer-height));
+  --side-nav-width: 64px;
+
+  /* Typography Scale */
+  --font-serif: var(--font-newsreader, 'Newsreader', Georgia, serif);
+  --font-sans: var(--font-jakarta, 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif);
+  --font-mono: var(--font-space, 'Space Grotesk', monospace, sans-serif);
+
+  /* Transitions */
+  --ease-editorial: cubic-bezier(0.76, 0, 0.24, 1);
+  --transition-fast: 200ms ease;
+  --transition-smooth: 400ms var(--ease-editorial);
+  --transition-page: 650ms var(--ease-editorial);
+
+  /* Z-Index Hierarchy */
+  --z-base: 1;
+  --z-board: 10;
+  --z-side-nav: 20;
+  --z-header: 30;
+  --z-footer: 30;
+  --z-lightbox: 100;
+  --z-modal: 110;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-page: 0ms !important;
+    --transition-smooth: 0ms !important;
+  }
+}

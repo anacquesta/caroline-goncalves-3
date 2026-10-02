@@ -1,0 +1,34 @@
+.stageViewport {
+  position: fixed;
+  top: var(--header-height);
+  bottom: var(--footer-height);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: var(--bg-canvas);
+  z-index: var(--z-board);
+}
+
+.stageCanvas {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.boardMotionWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Mobile: allow vertical expansion */
+@media (max-width: 768px) {
+  .stageViewport {
+    top: var(--header-height);
+    bottom: var(--footer-height);
+  }
+}
